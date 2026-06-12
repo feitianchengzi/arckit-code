@@ -22,9 +22,9 @@
 ```swift
 enum DesignTokens {
     enum Colors {
-        static let primary = Color("Primary", bundle: .module)
-        static let surface = Color("Surface", bundle: .module)
-        static let textPrimary = Color("TextPrimary", bundle: .module)
+        static let primary = Color("Primary")
+        static let surface = Color("Surface")
+        static let textPrimary = Color("TextPrimary")
     }
 
     enum Spacing {
@@ -35,7 +35,7 @@ enum DesignTokens {
 }
 ```
 
-示例只说明入口形态。真实项目的命名、bundle、资源生成工具和 token 分层以项目事实为准。
+示例只说明入口形态。真实项目的命名、bundle、资源生成工具和 token 分层以项目事实为准；只有资源位于独立 package/module 时才显式指定 bundle。
 
 ## 检查清单
 

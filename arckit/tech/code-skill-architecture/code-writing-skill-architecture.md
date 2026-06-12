@@ -58,7 +58,7 @@ references 采用一层文件结构，避免深层目录造成阅读路径不稳
 - 一个主任务 reference
 - 一个技术栈入口或技术栈 overlay
 
-复合任务先选择一个主任务 reference 和最多一个辅助任务 reference。根因确认后再扩展读取。
+复合任务先选择一个主任务 reference 和最多一个辅助任务 reference。端到端复杂功能先确定主链路和最高风险边界，再按相邻风险逐步扩展读取。
 
 ## 任务 reference 职责
 
@@ -158,7 +158,7 @@ SwiftUI 系统能力代码读取：
 - `skills/arckit-swiftui-system-integration/SKILL.md`
 - `skills/arckit-swiftui-system-integration/references/apple-integration-boundaries.md`
 
-SwiftUI 媒体管线代码读取：
+SwiftUI 分享媒体专项代码读取：
 
 - `skills/arckit-swiftui-share-media/SKILL.md`
 - `skills/arckit-swiftui-share-media/references/share-media-rules.md`

@@ -7,7 +7,7 @@
 - 状态优先局部化，复杂关联状态再抽 observable。
 - 平台控件在 SwiftUI 不覆盖或复刻会损害体验时使用 bridge。
 - UIKit/AppKit bridge 隔离在 adapter、representable、service 或 integration 层。
-- Xcode/SPM、最低系统版本、entitlements 和 Info.plist 属于工程事实，先读现有项目。
+- Xcode project/workspace、最低系统版本、entitlements 和 Info.plist 属于工程事实；业务代码是否需要独立 package/framework 由项目事实决定。
 
 ## 任务 overlay
 

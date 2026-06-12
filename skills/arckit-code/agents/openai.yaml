@@ -1,0 +1,6 @@
+interface:
+  display_name: "ArcKit Code"
+  short_description: "写代码执行流程与技术栈规则"
+  default_prompt: "使用 $arckit-code 处理代码实现、重构、调试或质量治理，并按代码问题类型和技术栈加载对应规则。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "ArcKit SwiftUI Share Media"
+  short_description: "SwiftUI 分享素材与平台媒体体验"
+  default_prompt: "使用 $arckit-swiftui-share-media 实现 SwiftUI 分享海报、二维码识别、ShareLink 和系统级图片查看体验。"
+policy:
+  allow_implicit_invocation: true

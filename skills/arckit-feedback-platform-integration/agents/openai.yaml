@@ -1,0 +1,27 @@
+interface:
+  display_name: "反馈平台接入"
+  short_description: "通过 UI 选择 SDK WebView 或原生 API 方案、凭证策略并接入反馈平台"
+  default_prompt: "使用 $arckit-feedback-platform-integration 接入反馈平台，通过 UI 选择 SDK WebView 或原生 API 方案、凭证策略和 customUserId 模式。"
+
+policy:
+  allow_implicit_invocation: true
+
+behavior:
+  language: "zh-Hans"
+  credential_strategy:
+    - "默认通过参数 UI 选择接入方案和凭证策略并采集 Project ID / API Key；不要先在聊天里追问策略。"
+    - "用户在 UI 中选择源码静态配置时，可以由脚本把真实 API Key 写入专用 Swift 配置文件。"
+    - "源码静态配置仍必须先完成平台官网引导和真实 Project ID / API Key 采集；未取得参数时禁止写默认启用的占位 provider。"
+    - "除非用户明确拒绝 UI 或 UI 不可用，禁止要求用户把真实 API Key 粘贴到聊天。"
+    - "安全 UI / secret store 策略下，禁止把真实 API Key 写入源码、测试 fixture、日志或最终回复。"
+    - "任何策略下都不要在日志、错误提示或最终回复中输出完整 API Key。"
+    - "允许处理 secret handle、后端运行时配置接口名、本地配置路径和配置状态。"
+  required_outputs:
+    - "列出接入入口和目标平台。"
+    - "说明是否已经引导打开平台官网；如果没有，说明原因。"
+    - "说明本轮采用的接入方案：sdk-webview 或 native-api。"
+    - "说明本轮采用的凭证策略；如果没有运行参数 UI，说明是用户明确跳过、环境不可用，还是凭证待配置。"
+    - "列出 Project ID、API Key、customUserId 的来源策略，不包含 API Key 明文。"
+    - "列出修改文件。"
+    - "说明用户还需要在哪个源码配置、本地配置、安全通道或后端运行时接口配置 Project ID / API Key。"
+    - "说明验证命令、结果和未完成风险。"
